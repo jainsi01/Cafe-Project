@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #f7b42c, #fc575e); /* Modern gradient */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker header for contrast */
+    color: white;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+    margin-left: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f7b42c; /* Hover effect for links */
+}
+
+section {
+    padding: 6rem 5%;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px); /* Slight hover animation */
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 1.2rem;
+    color: #f7b42c; /* Price color */
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form button {
+    margin: 12px 0;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form input {
+    background-color: #f7f7f7;
+}
+
+form button {
+    background-color: #fc575e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f7b42c; /* Modern hover effect */
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.reviews {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.reviews:hover {
+    transform: translateY(-10px); /* Slight hover animation */
+}
+
+.reviews .review {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 2%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
